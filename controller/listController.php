@@ -1,5 +1,5 @@
 <?php
 include_once './model/placesManager.php';
 
-$get_places = new Place();
-$lists = $get_places->getPlaces();
+$places = new Place();
+$lists = $places->getPlaces();
