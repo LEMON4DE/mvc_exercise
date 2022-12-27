@@ -1,0 +1,27 @@
+/* Places list table */
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+#table_number_head {
+    width: 20px;
+}
+
+#table_name_head, #table_address_head {
+    width: 250px;
+}
+
+#table_comment_head {
+    width: 350px;
+}
+
+#table_number_row, #table_name_row, #table_address_row, #table_comment_row {
+    height: 50px;
+}
+
+/* Menu bar */
+
+
+
