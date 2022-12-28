@@ -18,12 +18,12 @@
             <th>Action</th>
         </tr>
         <?php for($i = 0; $i < count($lists); $i++){?>
-        <tr>
+        <tr class="place_row">
             <td id="table_number_row"><?= $i + 1 ?></td>
             <td id="table_name_row"><?= $lists[$i]['name'] ?></td>
             <td id="table_address_row"><?= $lists[$i]['address'] ?></td>
             <td id="table_comment_row"><?= $lists[$i]['comment'] ?></td>
-            <td><button type="button">Delete</button></td>
+            <td><button type="button" class="delete_button" data-id="<?= $lists[$i]['id']?>">Delete</button></td>
         </tr>
         <?php } ?>
     </table>

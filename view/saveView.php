@@ -15,7 +15,7 @@
             <label for="address">Address: </label>
             <input type="text" name="address">
             <label for="comment">Comment: </label>
-            <input type="text" name="comment">
+            <textarea type="text" name="comment"></textarea>
             <button type="submit">Save</button>
         </form>
     </div>

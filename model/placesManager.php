@@ -22,5 +22,10 @@ class Place{
         return $get_places->fetchAll();
     }
 
-    // public function deletePlaces(){}
+    public function deletePlace($id){
+        $db = DB::connectDB();
+
+        $delete_place = $db->prepare('DELETE FROM places WHERE id = ?');
+        $delete_place->execute([$id]);
+    }
 }
