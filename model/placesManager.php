@@ -2,13 +2,16 @@
 include_once 'dbManager.php';
 
 class Place{
-    public function savePlace($name, $address, $comment){
+    public function savePlace($name, $address, $comment, $latitude, $longitude){
         $db = DB::connectDB();
 
-        $save_place = $db->prepare('INSERT INTO places (name, address, comment) VALUES (:name, :address, :comment)');
+        $save_place = $db->prepare('INSERT INTO places (name, address, comment, latitude, longitude) VALUES (:name, :address, :comment, :latitude, :longitude)');
         $save_place->bindParam(':name', $name);
         $save_place->bindParam(':address', $address);
         $save_place->bindParam(':comment', $comment);
+        $save_place->bindParam(':latitude', $latitude);
+        $save_place->bindParam(':longitude', $longitude);
+        
 
         $save_place->execute();
     }
@@ -29,10 +32,10 @@ class Place{
         $delete_place->execute([$id]);
     }
 
-    public function editPlace($name, $address, $comment, $id){
+    public function editPlace($name, $address, $comment, $latitude, $longitude, $id){
         $db = DB::connectDB();
 
-        $edit = $db->prepare('UPDATE places SET name = ?, address = ?, comment = ? WHERE id = ?');
-        $edit->execute([$name, $address, $comment, $id]);
+        $edit = $db->prepare('UPDATE places SET name = ?, address = ?, comment = ?, latitude = ?, longitude = ? WHERE id = ?');
+        $edit->execute([$name, $address, $comment, $latitude, $longitude, $id]);
     }
 }

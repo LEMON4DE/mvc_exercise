@@ -12,6 +12,8 @@
     <form method="post" action="">
         <input type="text" name="name" value=<?= $name ?>>
         <input type="text" name="address" value=<?= $address ?>>
+        <input type="text" name="latitude" value=<?= $latitude ?>>
+        <input type="text" name="longitude" value=<?= $longitude ?>>
         <textarea name="comment"><?= $comment ?></textarea>
         <button type="submit" name="save_edit">Save</button>
     </form>

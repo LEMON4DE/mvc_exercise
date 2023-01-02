@@ -32,27 +32,3 @@ delete_buttons.forEach(delete_button => { // like foreach($variables as $variabl
         });
     });
 })
-
-// // edit content using JavaScript
-// let edit_buttons = document.querySelectorAll('button.edit_button');
-
-// edit_buttons.forEach(edit_button => {
-//     let edit_id = edit_button.getAttribute('data-id');
-
-//     edit_button.addEventListener('click', function(){
-//         let formData = new FormData();
-//         formData.append('id', edit_id);
-//         formData.append('edit', 'edit');
-    
-//         let xhr = new XMLHttpRequest();
-//         xhr.open('POST', 'index.php?action=edit');
-//         xhr.send(formData);
-
-//         xhr.addEventListener('readystatechange', function(){
-//             if(xhr.readyState == XMLHttpRequest.DONE){
-                
-//             }
-//         })
-    
-//     })
-// })

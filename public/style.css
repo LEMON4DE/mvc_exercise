@@ -1,3 +1,9 @@
+/* Map */
+#map {
+    height: 570px;
+    width: 570px;
+}
+
 /* Places list table */
 table, th, td {
     border-collapse: collapse;

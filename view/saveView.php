@@ -16,6 +16,10 @@
             <input type="text" name="address">
             <label for="comment">Comment: </label>
             <textarea type="text" name="comment"></textarea>
+            <label for="comment">Latitude: </label>
+            <input type="text" name="latitude">
+            <label for="comment">Longitude: </label>
+            <input type="text" name="longitude">
             <button type="submit">Save</button>
         </form>
     </div>
