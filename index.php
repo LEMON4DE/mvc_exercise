@@ -8,7 +8,7 @@ if(isset($_GET['action'])){
     $action = 'home';
 }
 
-// determin valid action
+// determine valid action
 $controllers = scandir('./controller');
 $actions = [];
 foreach($controllers as $controller){

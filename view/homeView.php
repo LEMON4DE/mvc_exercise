@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
     $title = "Home";
     ob_start();

@@ -28,4 +28,11 @@ class Place{
         $delete_place = $db->prepare('DELETE FROM places WHERE id = ?');
         $delete_place->execute([$id]);
     }
+
+    public function editPlace($name, $address, $comment, $id){
+        $db = DB::connectDB();
+
+        $edit = $db->prepare('UPDATE places SET name = ?, address = ?, comment = ? WHERE id = ?');
+        $edit->execute([$name, $address, $comment, $id]);
+    }
 }
